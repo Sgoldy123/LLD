@@ -27,6 +27,7 @@ public class Expense {
         this.type = type;
         this.shares = shares;
         this.amountShare = calculateShare(toatlAmount,shares,shares.size(),type);
+        updatePassbook(paidby,userList,amountShare);
     }
 
     public List<Double> calculateShare(int toatlAmount, List<Double>shares ,int size , Type type){
@@ -37,6 +38,7 @@ public class Expense {
         else{
             strategy = new PercentAmountStrategyImpl();
         }
+
         return strategy.split(toatlAmount,shares,shares.size());
     }
 
