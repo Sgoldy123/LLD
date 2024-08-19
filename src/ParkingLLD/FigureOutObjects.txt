@@ -1,12 +1,19 @@
 
 
-ParkingSlot
--id
--Vehicle
+Building
+
 
 Floors
 - floorid
 - List<ParkingSlot>
+
+ParkingSlot
+-id
+-Vehicle
+
+ParkingStrategy
+
+
 
 
 Vehicle
@@ -17,3 +24,6 @@ Entry
 -Building
 -Ticket
 createTicket(Vehicle);
+
+Exit
+-payment
