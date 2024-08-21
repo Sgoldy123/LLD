@@ -6,7 +6,7 @@ import java.io.IOException;
 import java.util.List;
 
 public class Main {
-    public static void main(String[] args) {
+    public static synchronized void main(String[] args) {
         Orchestrator orchestrator = Orchestrator.getOrchestrator();
 
         String fileName = "/Users/soumya.sasmal/Desktop/Practice/LLD/src/Project_Dashboard/input.txt";

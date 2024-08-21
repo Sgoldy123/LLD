@@ -32,35 +32,28 @@ public class Orchestrator {
             if (parts.length >= 2) {
                 String action = parts[1];
 
-                switch (action) {
-                    case "CREATE":
-                        addBoard(parts);
-                        break;
-                    case "DELETE":
-                        deleteBoard(parts);
-                        break;
-                    default:
-                        updateBoardParam(parts);
-                        break;
-                }
+                if (action.equals("CREATE"))addBoard(parts);
+                else if(action.equals("DELETE"))deleteBoard(parts);
+                else updateBoardParam(parts);
             }
         }
     }
 
     private static void updateBoardParam(String[] parts) {
         for(Board board : orchestrator.getBoardList()) {
-                if (parts[2].equals(board.getBoardId()) && parts[3] == "name") {
-                    board.setName(parts[4]);
+            //System.out.println(board.getBoardId());
+                if (parts[1].equals(board.getBoardId()) && parts[2].equals("name")) {
+                    board.setName(parts[3]);
                 }
-                else if (parts[2].equals(board.getBoardId()) && parts[3] == "privacy") {
-                    board.setName(parts[4]);
+                else if (parts[1].equals(board.getBoardId()) && parts[2].equals("privacy")) {
+                    board.setPrivacy(Privacy.PRIVATE);
                 }
-                else if (parts[2].equals(board.getBoardId()) && parts[3] == "ADD_MEMBER") {
-                        board.addUsers(new User(parts[4]));
+                else if (parts[1].equals(board.getBoardId()) && parts[2].equals("ADD_MEMBER")) {
+                        board.addUsers(new User(parts[3]));
                 }
-                else if (parts[2].equals(board.getBoardId()) && parts[3] == "REMOVE_MEMBER") {
+                else if (parts[1].equals(board.getBoardId()) && parts[2].equals("REMOVE_MEMBER")) {
                     for(User user : board.getUsers()) {
-                        if (user.getName().equals(parts[4])) {
+                        if (user.getName().equals(parts[3])) {
                             board.removeUsers(user);
                         }
                     }
@@ -71,15 +64,17 @@ public class Orchestrator {
     }
 
     private static void deleteBoard(String[] parts) {
+        Board deleteBoard = null;
         for(Board board : orchestrator.getBoardList()) {
             if (parts[2].equals(board.getBoardId())) {
-                orchestrator.getBoardList().remove(board);
+                deleteBoard = board;
             }
         }
+        orchestrator.getBoardList().remove(deleteBoard);
     }
 
     private static void addBoard(String[] parts) {
-        orchestrator.getBoardList().add(new Board(parts[2]));
+        orchestrator.getBoardList().add(new Board(parts[2],"1"));
     }
 
 

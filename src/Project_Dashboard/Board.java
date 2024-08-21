@@ -12,9 +12,9 @@ public class Board {
   private List<User> users;
   private List<Lists> lists;
 
-  public Board(String name) {
+  public Board(String name,String boardId) {
     this.name = name;
-    this.boardId = "boardId_" + UUID.randomUUID().toString();
+    this.boardId = boardId+name;
     this.privacy = Privacy.PUBLIC;
     this.users = new ArrayList<User>();
     this.lists = new ArrayList<Lists>();
