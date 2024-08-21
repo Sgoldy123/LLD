@@ -1,0 +1,43 @@
+User
+-int userId
+-Location location
+
+Location
+-stirng address
+-string pin
+
+Movie
+-int movieId
+-string name
+-int duration
+
+Screen
+-int screenId
+-Movie movie
+-Seat seat
+-int startTime
+-int endTime
+-Int price
+
+Seat
+-List<integer>
+
+Theatre
+-int id
+-List<Show>
+
+TheatreManager
+-Map<Location,List<Show>>
+
+Ticket
+-int id
+-User user
+-Theatre
+-Screen
+-int seatNo
+
+
+Payment
+-int id
+-int ticketId
+-int
