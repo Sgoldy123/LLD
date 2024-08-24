@@ -1,0 +1,28 @@
+Library
+-List<Rack> (1 to n) rackList
+-List<Book> bookList
+-List<Borrow> borrowList
+
+Rack
+-int rackId
+-int size
+-Map<integer,Book> //
+
+Book
+-int bookid
+-int rackId
+-String title
+-String author
+-String publisher
+-boolean isBorrowed
+
+User
+-int userId
+-String name
+-List<Borrow> borrows (maximum 5 books)
+
+Borrow
+-String borrowId
+-int bookId
+-int userId
+-Date dewDate
