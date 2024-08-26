@@ -1,5 +1,7 @@
 package ParkingLLD;
 
+import lombok.Builder;
+
 import java.util.ArrayList;
 import java.util.List;
 
