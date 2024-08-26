@@ -1,0 +1,42 @@
+
+
+User
+-userId
+-List<String> borrowedBookList
+-List<String> allBorrowedBookTillNow
+
+UserManagement:
+-User
+- addUser()
+- getUser()
+
+Book
+-bookId
+-isAvailable
+
+
+Rack
+-rackId
+-rackSize
+-List<String> bookId;
+
+Library
+-List<Rack> racks;
+-List<String> borrowedBooks;
+
+LibraryManagement
+-List<Library> libraries
+-createLibrary()
+-addRack()
+-borrowBook()-> add book to user`s borrowedBookList & allBorrowedBookTillNow, update book isAvailable, add into library`s borrowedBooks
+-returnBook();  remove book to user`s borrowedBookList, update book isAvailable, remove into library`s borrowedBooks
+-Print(): for all print function
+
+
+Orchestrator:
+-LibraryManagementObj SingleTon Object
+-UserManagementObj SingleTon Object
+--will create user and add into userManagementObj;
+-- will create books and add into respected rack with LibraryManagementObj;
+-- when user borrow book, will call  borrowBook()
+-- when user return, will call returnBook()

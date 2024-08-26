@@ -10,8 +10,5 @@
         <module name="LLDPractice" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
-      <module name="LLDPractice" target="17" />
-    </bytecodeTargetLevel>
   </component>
 </project>
