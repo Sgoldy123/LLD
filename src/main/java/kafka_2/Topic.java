@@ -25,6 +25,7 @@ public class Topic {
     }
 
     public void publish(){
+        System.out.println("publish sleep thread: "+Thread.currentThread().getName());
         for(Consumer consumer: consumersList){
             notifyConsumer(consumer);
         }
@@ -44,3 +45,4 @@ public class Topic {
 
     }
 }
+

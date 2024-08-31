@@ -4,6 +4,8 @@ import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.NoArgsConstructor;
 
+import java.io.BufferedWriter;
+import java.io.FileWriter;
 import java.util.*;
 
 @Builder
@@ -43,13 +45,17 @@ public class Kafka {
     synchronized public  void  publishMessage(String producerId, String topicId, String msg){
        final Topic topic=topicMap.get(topicId);
         topic.addMessage(msg);
-        System.out.println(producerId+" - publish "+topicId+" "+msg);
+        System.out.println(Thread.currentThread().getName()+"**"+producerId+" - publish "+topicId+" "+msg);
         new Thread(()->topic.publish()).start();
     }
 
 
     public void addConsumerToTopic(String topicid,String consumerId){
         topicMap.get(topicid).getConsumersList().add(consumerMap.get(consumerId));
+        consumerMap.get(consumerId).setOffsetWRTTopic(topicid);
     }
+
+
+
 
 }

@@ -16,18 +16,29 @@ public class ConsumerWorker implements Runnable{
 //    @SneakyThrows
     @Override
     public void run() {
+
         synchronized (consumer){
-            int offset=consumer.getOffset().get();
+//            int curOffset = consumer.getOffset().get();
+
             List<String> queueMsg=topic.getMsgQueue();
+
             do{
-                while(offset>=queueMsg.size()) {
+                int curOffset = consumer.getOffSetWRTTopic(topic.getTopicId());
+                System.out.println(Thread.currentThread().getName()+"**"+consumer.getConsumerId()+" "+curOffset);
+
+
+                while(curOffset>=queueMsg.size()) {
                     try {
                         consumer.wait();
                     } catch (Exception e) {
                     }
                 }
-                consumer.consumedMessage(queueMsg.get(offset),topic.getTopicId());
-                consumer.getOffset().compareAndSet(offset,offset+1);
+                String msg=queueMsg.get(curOffset);
+                consumer.consumedMessage(msg,topic.getTopicId());
+//                consumer.getOffset().compareAndSet(curOffset,curOffset+1);
+                consumer.setOffsetWRTTopic(topic.getTopicId());
+//                curOffset=1;
+//                System.out.println(" ######## ####  ###" + consumer.getOffset());
             }
             while(true);
         }

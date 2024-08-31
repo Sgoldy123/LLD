@@ -1,7 +1,12 @@
 package kafka_2;
 
+import lombok.SneakyThrows;
+
+
 public class Orchestrator {
     public static void main(String[] args) {
+
+        String fileName = "output.txt";  // Specify your file name here
 
         Kafka kafka=Kafka.getInstance();
 
@@ -35,12 +40,11 @@ public class Orchestrator {
 
 
         // **** publish message *******
-        kafka.publishMessage("producer1","topic1","thread1msg"+"notOk:(");
-//       Thread t1=new Thread(()-> {
-//           for(int i=0;i<2;i++){
-//               kafka.publishMessage("producer1","topic1","thread1msg"+i);
-//           }
-//       });
+//        kafka.publishMessage("producer1","topic1","msg1");
+        for(int i=0;i<1;i++){
+            kafka.publishMessage("producer1","topic1","topic1msg"+i);
+            kafka.publishMessage("producer1","topic2","topic2msg"+i);
+        }
 //
 //        Thread t2=new Thread(()-> {
 //           for(int i=0;i<2;i++){
