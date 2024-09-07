@@ -1,1 +1,2 @@
 https://youtu.be/4BEzgPlLKTo
+https://github.com/anomaly2104/low-level-design-messaging-queue-pub-sub

@@ -1,0 +1,67 @@
+
+
+User
+-userId
+-Card
+
+Card
+- cardNum
+- pin
+- Account
+
+Account
+- amount
+- getAmount
+- updateAmount
+
+
+Atm
+-State
+
+
+// State
+<<State>>
+
+
+IdleState
+-inserCard
+
+
+HasCardState
+-enterPin
+
+
+SelectOperationState
+-inquiry
+-deposit
+-withdraw
+
+
+<<Dispense>>
+
+ThousandDispense
+
+FiveHundredDispense
+
+HundredDispense
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
