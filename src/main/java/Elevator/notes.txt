@@ -1,0 +1,38 @@
+
+simple solution: https://github.com/ashishps1/awesome-low-level-design/blob/main/problems/elevator-system.md
+
+
+Enum Direction
+
+
+Elevator
+-capacity
+-InternalButton
+-Display
+
+
+Display
+-Direction
+-currentFloor
+
+
+InternalButton
+minHeap -> pressedButton > currentFloor
+maxHeap -> pressedButton <currentFloor
+pressButton()
+
+
+ExternalButton
+-Direction
+
+
+
+Floor
+-floorno
+-ExternalButton
+
+
+User
+
+Building
+Floor
