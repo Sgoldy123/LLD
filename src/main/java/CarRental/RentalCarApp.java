@@ -17,6 +17,8 @@ public class RentalCarApp {
         customerManager.getCustomerList().add(new Customer("customer2"));
 
         // create reservation
+        //        LocalDateTime dateTime = LocalDateTime.now();
+        //        System.out.println(dateTime.getYear());
         reservation.createReservation(customerManager.getCustomerList().get(0), LocalDate.of(2024,9,15),
                 LocalDate.of(2024,9,17),CarType.SEDAN);
 

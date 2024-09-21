@@ -1,0 +1,60 @@
+
+
+User
+-LoginCredential
+-UserProfile
+-Post
+-Message
+-Notification
+-Connection
+-Search
+
+LoginCredential
+-userId
+-email
+-password
+
+UserProfile
+-profileImg
+-headline
+-summary
+-experience
+-education
+-skill
+-update()
+
+
+Message
+-Map<userid,List<String>> chat
+-send(to)
+
+
+Notification
+-List<String> notifications
+
+
+Search
+-searchUser()
+-otherSearchesToo()
+
+
+
+Post
+-List<Post> posts;
+-createPost(
+    -title
+    -description
+    -requirements
+    -location
+    -postedby
+)
+
+Connection
+-Map<String,Map<String>> connections;
+
+SignInSignUp
+-login()
+-registration()
+
+
+

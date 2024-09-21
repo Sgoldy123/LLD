@@ -1,0 +1,23 @@
+
+
+Elevator
+-Display
+-State
+-InternalButton
+-currentFloor
+-press() this fun is for  is for when we inside the lift.
+
+
+ElevatorMgr
+-minHeap -> movingUpRequest;
+-maxHeap -> movingDownRequest;
+-addNewRequest;   this fun is for  user press externalButton call from ExternalButton object
+
+
+InternalButton
+press(int floor)
+
+
+ExternalButton
+-List<ElevatorMgr>
+-press(Direction, floorno)   it will find the appropriate lift with some strategy
