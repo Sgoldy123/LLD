@@ -1,0 +1,60 @@
+
+
+
+There will be list of Shows
+Ticket - booked by user
+User
+
+*******************************************************************************
+
+SeatInfo
+-seatNo
+-price
+-isAvailable
+-SeatType <<enum>>
+
+
+Seat
+-List<SeatInfo> seats
+-
+
+ConcertInfo
+-concertId
+-Artist
+-Venue
+-LocalData
+-LocalTime
+
+
+
+Concert
+-ConcertInfo
+-Seat
+
+
+ConcertManager
+-List<Concert>
+-search() (Artist,Venue,Data,Time)
+-BookConcert(User,ConcertId): Ticket  this should be synchronized
+-sendMsgAfterBooking
+
+Ticket
+-concertId
+-userId
+-SeatInfo
+
+
+User
+-userId
+-email
+
+
+
+
+
+
+
+
+
+
+

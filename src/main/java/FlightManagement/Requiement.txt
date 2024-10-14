@@ -1,0 +1,81 @@
+
+
+
+FlightInfo
+-flightId
+-source
+-destination
+-Data
+-time
+-price
+
+<<Enum>>SeatType
+-Economic
+-Premium
+-Business
+
+SeatInfo
+-SeatType
+-price
+-isAvailable
+
+
+Seat
+-List<SeatInfo>
+
+
+
+Passenger
+-pnr
+-baggage
+
+PassengerManager
+-List<Passenger>
+
+
+Crew
+-CrewType
+-crewId
+
+CrewManager
+-List<Crew>
+
+
+
+AirCraft
+-model;           // Model of the aircraft (e.g., Boeing 737)
+-tailNumber;      // Unique identifier of the aircraft
+-totalSeats;
+
+Flight
+-FlightInfo
+-Seat
+-AirCraft assigned
+-CrewManager
+-PasangerManager
+
+AirCraftManager
+-List<Flight>
+
+
+Application
+-FlightManager
+-bookFlight()   // first enter src des date --> list of flight ----> select seat ---> payement --> get the ticket & pnr....
+-updateFlight()  // with pnr
+-cancelFlight()  // with pnr
+-payment()
+
+
+User
+-name
+-email
+-password
+booking time this user will become passenger
+
+
+
+
+
+
+
+

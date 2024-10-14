@@ -1,0 +1,29 @@
+
+
+User
+-userId
+-password
+-notify(String)
+
+UserManager  (Singleton Object)
+-Map<String,User> Users
+-login() : User
+-register():User
+-notifyAllUser(Item)
+
+
+Item
+-itemId
+-itemName
+-description
+-startingPrice
+-auctionDuration : LocalDate
+
+ItemManager (Singleton Object)
+-Map<String,Item> items
+-placeBid(itemId,int price); it should be synchronized.
+
+
+AuctionAppDemo
+-
+
