@@ -27,7 +27,7 @@ public class ConsumerWorker implements Runnable{
                 System.out.println(Thread.currentThread().getName()+"**"+consumer.getConsumerId()+" "+curOffset);
 
 
-                while(curOffset>=queueMsg.size()) {
+                while(curOffset>=queueMsg.size()) {   //why while so need to wake up it can automatically run..
                     try {
                         consumer.wait();
                     } catch (Exception e) {
