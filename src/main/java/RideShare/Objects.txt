@@ -1,0 +1,51 @@
+
+
+User
+-userId;
+-vehicle
+//expose through getter setter
+
+
+Vehicle
+-vehicleNo.
+-totalSeats
+-vehicleType
+//expose through getter setter
+
+<<enumeration>>
+VehicleType
++Auto
++Bike
++Car
+
+
+Ride
+-source
+-destination
+-availableSeat
+-vehicle
+
+Ride status
+-yetToStart
+-Started
+-Competed
+
+RideController
+-SelectionStrategy //for selecting vehicle
++vehicleToRideMapping
++List<Ride> rideCompletion
++createRide
++selectRide
++startVehicle
++endVehicle
+
+<<interface>>
+ISelectionStrategy
++selectVehicle():
+
+ISelectStrategyWithVacantSeat
++selectVehicle():
+
+
+
+

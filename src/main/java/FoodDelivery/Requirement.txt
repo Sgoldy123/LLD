@@ -1,0 +1,51 @@
+
+
+Item
+-name
+-price
+-ingredients
+
+Menu
+-List<Item> items;
+
+Restaurant
+-Menu
+-open
+-close
+
+
+<<enum>>
+Status
+-Received
+-Cooking
+-Packaging
+-PickedUp
+-Delivered
+
+Order
+-customerId
+-assignedDeliveryAgentId
+-Status
+-List<Item> items
+-price
+
+OrderManager
+-CRUD operation
+
+DeliveryAgent
+-id
+-name
+
+DeliveryAgentManager
+-CRUD operation
+
+Customer
+-id
+-name
+
+
+CustomerManager
+-CRUD operation
+
+Payment
+-

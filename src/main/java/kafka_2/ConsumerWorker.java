@@ -45,7 +45,7 @@ public class ConsumerWorker implements Runnable{
 
     }
 
-    public synchronized void wakeUpThreadIfNeeded(){
+    public  void wakeUpThreadIfNeeded(){
         synchronized (consumer){
             consumer.notify();
         }

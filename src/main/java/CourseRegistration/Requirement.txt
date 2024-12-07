@@ -1,0 +1,18 @@
+
+
+
+Student
+-id
+-name
+-List<Course>
+
+Course
+-code
+-name
+-instructor
+-enrollCapacity
+
+CourseManager
+-Map<code,Course> courses
+-searchCourse()
+-enrollCourse()

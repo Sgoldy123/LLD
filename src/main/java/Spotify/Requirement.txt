@@ -1,0 +1,78 @@
+
+
+Song
+-id
+-title
+-artist
+-album
+-duration
+
+SongRepository
+-CRUD //opr
+
+Artist
+-id
+-artist
+-List<Song> songs
+
+Artist
+-CRUD // opr
+
+Album
+-id
+-artist
+-album //name
+-List<Song>song
+
+AlbumRepository
+-CRUD //opr
+
+PlayList
+-id
+-name
+-List<Song>
+
+
+User
+-id
+-username
+-password
+-List<PlayList>
+
+UserRepository
+-CRUD// opr for User
+
+
+
+MusicPlayer
+-playMusic(Song song)
+-pause()
+-seekTo()
+
+
+MusicRecommendation
+-Map<userId,List<Song>> recommendationSongForAUser
+
+InMemory
+-SongRepository
+-ArtistRepository
+-AlbumRepository
+-UserRepository
+-MusicRecommendation
+
+***Service*** for writing business login
+InMemory
+UserService  // like login, register then store in UserRepository from InMemory
+SongService  // write login then store in respect song,artist,album repository
+MusicPlayer  // for playing, pausing song
+MusicRecommendationService // for wrting recomendataion and store in InMemory MusicRecommendation
+
+
+Demo
+-
+
+
+
+
+
+
