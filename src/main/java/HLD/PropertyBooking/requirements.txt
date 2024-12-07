@@ -1,0 +1,30 @@
+Property Booking App
+
+FR
+-user can search and book property
+-user onboard properties
+-payment(third party)
+-Signin/Signoff
+
+NFR
+-consitent
+-optional///availability
+
+BOE
+Tot no.U-10 million
+DAU- 10%--1 million/per day
+
+storage -
+10 m * 10 MB - 100 GB user data
+1 million -user - owners -- 5 property
+5 million proeprties - 100MB/per prroperty
+500 GB total + 100 GB --> total storage required
+
+Read: write
+90:10 -
+
+RAM estimation
+10,000 req/sec(single threaded)
+10MB/req
+10^5 MB - 100 GB
+50GB-RAM--
