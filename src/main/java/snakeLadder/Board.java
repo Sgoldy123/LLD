@@ -51,8 +51,10 @@ public class Board
                     break;
                 }
             }
+            assert player != null;
             int pos=player.getPos() +rolledValue;
             while(jumps.containsKey(pos)){
+                System.out.println(player.getName() + " ' s position shifted from "+ pos+ " to " +jumps.get(pos).getEnd());
                 pos=jumps.get(pos).getEnd();
             }
             if(pos>boardSize){
@@ -61,6 +63,7 @@ public class Board
             else{
                 if(pos==boardSize){
                     flag=false;
+                    System.out.println(player.getName() + " rolled a "+ rolledValue+" and moved from "+player.getPos()+ " to " +pos);
                     winner=player.getName();
                     break;
                 }
