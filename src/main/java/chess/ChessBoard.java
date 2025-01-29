@@ -6,7 +6,7 @@ public class ChessBoard {
     private int n=8;
     private ChessBoard(){
         board=new Piece[8][8];
-        Piece blackPawn=Piece.builder().pieceName("BP").pieceType(PieceType.PAWN).build();
+        Piece blackPawn=new Piece("BP",(PieceType.PAWN));
         Piece blackRookie=Piece.builder().pieceName("BR").pieceType(PieceType.ROOKIE).build();
         Piece blackBishop=Piece.builder().pieceName("BB").pieceType(PieceType.BISHOP).build();
         Piece blackKnight=Piece.builder().pieceName("BN").pieceType(PieceType.KNIGHT).build();
