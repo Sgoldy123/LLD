@@ -7,7 +7,6 @@ import java.util.UUID;
 public class Board {
   private String boardId;
   private String name;
-
   private Privacy privacy;
   private List<User> users;
   private List<Lists> lists;

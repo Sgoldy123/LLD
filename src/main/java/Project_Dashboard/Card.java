@@ -5,9 +5,7 @@ import java.util.UUID;
 public class Card {
     private String cardId;
     private String name;
-
     private String description;
-
     private String userId;
 
     public Card(String name, String description) {

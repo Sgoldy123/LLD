@@ -12,7 +12,7 @@ URLs should get created based on the id
 Board
 -string id
 -string name
--Enum Privscy(public.private)
+-Enum Privacy(public.private)
 -List<User> members
 -List<Lists>
 
