@@ -1,7 +1,7 @@
 
 
 Authentication
--Map<userId,User>
+-Map<userId,NoBroker.User>
 -login()
 -register()
 
@@ -39,12 +39,12 @@ Post
 -FriendRequest
 
 
-User
+NoBroker.User
 -UserInfo
 -Profile
--List<User> friends
+-List<NoBroker.User> friends
 -List<Post> posts
 -notification(NotificationType)
 
 UserManager
--List<User> users
+-List<NoBroker.User> users

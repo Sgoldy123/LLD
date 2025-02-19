@@ -6,7 +6,7 @@ Piece
 -posY
 
 
-User
+NoBroker.User
 -color
 -userId
 
@@ -19,5 +19,5 @@ ChessBoard
 
 Game
 -ChessBoard
--Deque<User>
+-Deque<NoBroker.User>
 

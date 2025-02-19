@@ -16,7 +16,7 @@ Book
 -String publisher
 -boolean isBorrowed
 
-User
+NoBroker.User
 -int userId
 -String name
 -List<Borrow> borrows (maximum 5 books)

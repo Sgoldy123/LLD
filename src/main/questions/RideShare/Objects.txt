@@ -1,6 +1,6 @@
 
 
-User
+NoBroker.User
 -userId;
 -vehicle
 //expose through getter setter

@@ -18,7 +18,7 @@ Account
 ConvertMoney
 -convertMoneyfun():
 
-User
+NoBroker.User
 -userid
 -email
 -password
@@ -27,7 +27,7 @@ User
 
 
 DigitalWallet
--Map<String,User> users
+-Map<String,NoBroker.User> users
 -amountTranfer():
 
 DigitalWalletDemo
@@ -77,13 +77,13 @@ Transaction
 -showTransaction()
 
 
-User
+NoBroker.User
 -UserInfo
 -List<Card> card;
 -Transaction
 
 UserManager
--Map<String,User> users
+-Map<String,NoBroker.User> users
 
 
 

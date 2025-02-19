@@ -3,7 +3,7 @@
 
 There will be list of Shows
 Ticket - booked by user
-User
+NoBroker.User
 
 *******************************************************************************
 
@@ -35,7 +35,7 @@ Concert
 ConcertManager
 -List<Concert>
 -search() (Artist,Venue,Data,Time)
--BookConcert(User,ConcertId): Ticket  this should be synchronized
+-BookConcert(NoBroker.User,ConcertId): Ticket  this should be synchronized
 -sendMsgAfterBooking
 
 Ticket
@@ -44,7 +44,7 @@ Ticket
 -SeatInfo
 
 
-User
+NoBroker.User
 -userId
 -email
 

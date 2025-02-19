@@ -33,14 +33,14 @@ PlayList
 -List<Song>
 
 
-User
+NoBroker.User
 -id
 -username
 -password
 -List<PlayList>
 
 UserRepository
--CRUD// opr for User
+-CRUD// opr for NoBroker.User
 
 
 

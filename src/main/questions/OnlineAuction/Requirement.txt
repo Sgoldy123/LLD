@@ -1,14 +1,14 @@
 
 
-User
+NoBroker.User
 -userId
 -password
 -notify(String)
 
 UserManager  (Singleton Object)
--Map<String,User> Users
--login() : User
--register():User
+-Map<String,NoBroker.User> Users
+-login() : NoBroker.User
+-register():NoBroker.User
 -notifyAllUser(Item)
 
 

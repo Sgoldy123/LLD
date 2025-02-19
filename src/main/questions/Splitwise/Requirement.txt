@@ -9,16 +9,16 @@ EXPENSE <user-id-of-person-who-paid> <no-of-users> <space-separated-list-of-user
 
 Expense
 -string id
--User paidBy
--List<User>
+-NoBroker.User paidBy
+-List<NoBroker.User>
 -type(Exact/…)
 -List<int> shares
 
 Balance
--getback - Map<User,int>
--give - Map<User,int>
+-getback - Map<NoBroker.User,int>
+-give - Map<NoBroker.User,int>
 
-User
+NoBroker.User
 -string id
 -Balance balance
 

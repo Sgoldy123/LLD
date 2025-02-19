@@ -1,4 +1,4 @@
-User
+NoBroker.User
 -int userId
 -Location location
 
@@ -31,7 +31,7 @@ TheatreManager
 
 Ticket
 -int id
--User user
+-NoBroker.User user
 -Theatre
 -Screen
 -int seatNo

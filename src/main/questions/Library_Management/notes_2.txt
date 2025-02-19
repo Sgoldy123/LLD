@@ -1,12 +1,12 @@
 
 
-User
+NoBroker.User
 -userId
 -List<String> borrowedBookList
 -List<String> allBorrowedBookTillNow
 
 UserManagement:
--User
+-NoBroker.User
 - addUser()
 - getUser()
 

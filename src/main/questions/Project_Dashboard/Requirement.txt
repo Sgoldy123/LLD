@@ -13,7 +13,7 @@ Board
 -string id
 -string name
 -Enum Privacy(public.private)
--List<User> members
+-List<NoBroker.User> members
 -List<Lists>
 
 ———
@@ -30,9 +30,9 @@ Card
 -string id
 -string name
 -string description
--User
+-NoBroker.User
 
-User
+NoBroker.User
 -string userId
 -string mail
 -string name
